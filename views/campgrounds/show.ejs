@@ -1,0 +1,12 @@
+<% layout('layout/boilerplate') %>
+    <a href="/campgrounds">Back</a>
+    <div>
+
+        <h1><%=campgrounds.title%></h1>
+        <h2><%=campgrounds.location%></h2>
+        <img src="<%=campgrounds.image%>" alt="">
+    </div>
+    <a href="/campgrounds/<%=campgrounds._id%>/edit">Edit</a>
+    <form action="/campgrounds/<%=campgrounds._id%>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>

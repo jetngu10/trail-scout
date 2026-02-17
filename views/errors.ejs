@@ -1,14 +1,11 @@
-<% layout('layout/boilerplate')%>
-<%# Bootstrap alert card for bubbled-up Express errors %>
+<% layout('layout/boilerplate') %>
 <div class="row">
-    <div class="col-6 offset-3">
-        <div class="alert alert-danger" role="alert">
-            <h4 class="alert-heading"><%=err.message%></h4>
-        
-            <p><%=err.statusCode%></p>
-            <hr>
-            <p class="mb-0"><%=err.stack%></p>
-        </div>
-
+  <div class="col-6 offset-3">
+    <div class="alert alert-danger" role="alert">
+      <h4 class="alert-heading"><%= err.message %></h4>
+      <p><%= err.statusCode %></p>
+      <hr>
+      <p class="mb-0"><%= err.stack %></p>
     </div>
+  </div>
 </div>
